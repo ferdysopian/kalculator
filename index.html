@@ -11,11 +11,11 @@
 	<script src="js/bootstrap.js"></script>
 	<!--javascript-->
 	<script>
-		function tambahNomor(input, nomor){
-			if(input.value = null || input.value = 0)
-				input.value = nomor
+		function tambahNomor(display, nomor){
+			if(display.value = null || display.value = 0)
+				display.value = nomor
 			else
-				input.value += nomor
+				display.value += nomor
 		}
 	</script>
 
@@ -33,7 +33,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="jawaban">
-					<h3 class="pull-right"><input type="text" value="0"></h3>
+					<h3 class="pull-right"><input id="display" type="text" value="0"></h3>
 				</div>
 			</div>
 		</div>
@@ -43,36 +43,36 @@
 			<form>
 				<div class="row">
 					<div class="col-xs-6"></div>
-					<div class="col-xs-3"><buttton class="btn btn-default"><h4>P</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default"><h4>%</h4></buttton></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default"></div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><buttton class="btn btn-default" value="7" onclick="tambahNomor()"><h4>7</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="8"><h4>8</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="9"><h4>9</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="*"><h4>X</h4></buttton></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="7" onclick="tambahNomor(display, nomor)" ></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="8"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="9"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="*"></div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><buttton class="btn btn-default" value="4"><h4>4</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="5"><h4>5</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="6"><h4>6</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="-"><h4>-</h4></buttton></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="4"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="5"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="6"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="-"></div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><buttton class="btn btn-default" value="1"><h4>1</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="2"><h4>2</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="3"><h4>3</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="+"><h4>+</h4></buttton></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="1"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="2"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="3"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="+"></div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><buttton class="btn btn-default" value=""><h4>+-</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="0"><h4>0</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value=","><h4>.</h4></buttton></div>
-					<div class="col-xs-3"><buttton class="btn btn-default" value="="><h4>=</h4></buttton></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value=""></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="0"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value=","></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="="></div>
 				</div>
 			</form>
 		</div>

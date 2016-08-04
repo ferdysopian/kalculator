@@ -1,6 +1,9 @@
 .warnalatar{
 	background-color: #E5E5E5;
 }
+.warnalatar input{
+	font-size: 20px;
+}
 .jawaban{
 	height: 100px;
 }
@@ -25,7 +28,4 @@
 	border-color: #E5E5E5;
 	background-color: #5E5B5B;
 	color:#fff;
-}
-h4{
-	font-size: 20px;
 }
