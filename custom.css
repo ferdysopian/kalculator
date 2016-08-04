@@ -1,0 +1,14 @@
+.warnalatar{
+	background-color: #E5E5E5;
+}
+.jawaban{
+	height: 100px;
+}
+.tombol{
+	text-align: center;
+}
+.tombol .btn{
+	height: 100%;
+	width: 100%;
+	padding: 15px 15px;
+}
