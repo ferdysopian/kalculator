@@ -10,5 +10,22 @@
 .tombol .btn{
 	height: 100%;
 	width: 100%;
-	padding: 15px 15px;
+	padding: 30px 30px;
+}
+.tombol > .col-xs-3{
+	padding-left: 0px;
+	padding-right: 0px;
+	border-radius: 0px;
+}
+.btn-default{
+	border-color: #E5E5E5;
+	background-color: #E5E5E5;
+}
+.btn-default:hover{
+	border-color: #E5E5E5;
+	background-color: #5E5B5B;
+	color:#fff;
+}
+h4{
+	font-size: 20px;
 }
