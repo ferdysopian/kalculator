@@ -7,18 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="custom.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<!--javascript-->
-	<script>
-		function tambahNomor(display, nomor){
-			if(display.value = null || display.value = 0)
-				display.value = nomor
-			else
-				display.value += nomor
-		}
-	</script>
-
 </head>
 <body>
 
@@ -30,17 +18,17 @@
 		<!--sampe sini bagian judul-->
 
 		<!--dari sini bagian jawaban-->
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="jawaban">
-					<h3 class="pull-right"><input id="display" type="text" value="0"></h3>
+		<form>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="jawaban">
+						<input style="border:0px; width:100%; font-size:40px;" id="display" type="text" value="0">
+					</div>
 				</div>
 			</div>
-		</div>
-		<!--sampe sini kolom jawaban-->
+			<!--sampe sini kolom jawaban-->
 
-		<div class="tombol warnalatar">
-			<form>
+			<div class="tombol warnalatar">
 				<div class="row">
 					<div class="col-xs-6"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default"></div>
@@ -48,34 +36,47 @@
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="7" onclick="tambahNomor(display, nomor)" ></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="8"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="9"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="*"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="7" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="8" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="9" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value=" * " onclick="tambahNomor(this)"></div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="4"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="5"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="6"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="-"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="4" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="5" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="6" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value=" - " onclick="tambahNomor(this)"></div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="1"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="2"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="3"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="+"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="1" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="2" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="3" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value=" + " onclick="tambahNomor(this)"></div>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value=""></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="0"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value=","></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="="></div>
+					<div class="col-xs-3"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="0" onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="=" onclick=""></div>
 				</div>
-			</form>
-		</div>
+			</div>
+		</form>
 	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<!--javascript-->
+	<script type="text/javascript">
+		function tambahNomor(elmnt){
+			var nomor = elmnt.value;
+			if(document.getElementById("display").value == null || document.getElementById("display").value == 0)
+				document.getElementById("display").value = nomor;
+			else
+				document.getElementById("display").value += nomor;
+		}
+	</script>
+
 </body>
 </html>

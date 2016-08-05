@@ -4,6 +4,9 @@
 .warnalatar input{
 	font-size: 20px;
 }
+.container{
+	max-width: 400px;
+}
 .jawaban{
 	height: 100px;
 }
@@ -14,6 +17,7 @@
 	height: 100%;
 	width: 100%;
 	padding: 30px 30px;
+	border:0px;
 }
 .tombol > .col-xs-3{
 	padding-left: 0px;
