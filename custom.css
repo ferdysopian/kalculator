@@ -10,6 +10,10 @@
 .jawaban{
 	height: 100px;
 }
+.jawaban input{
+	text-align: right;
+	padding: 0px 20px;
+}
 .tombol{
 	text-align: center;
 }

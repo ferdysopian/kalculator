@@ -30,37 +30,37 @@
 
 			<div class="tombol warnalatar">
 				<div class="row">
-					<div class="col-xs-6"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default"></div>
+					<div class="col-xs-6"><input type="reset" class="btn btn-default" value="c"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="<=" onclick="hapus(this.form.display)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="/" onclick="tambahNomor(this)"></div>
 				</div>
 
 				<div class="row">
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="7" onclick="tambahNomor(this)"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="8" onclick="tambahNomor(this)"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="9" onclick="tambahNomor(this)"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value=" * " onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="*" onclick="tambahNomor(this)"></div>
 				</div>
 
 				<div class="row">
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="4" onclick="tambahNomor(this)"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="5" onclick="tambahNomor(this)"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="6" onclick="tambahNomor(this)"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value=" - " onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="-" onclick="tambahNomor(this)"></div>
 				</div>
 
 				<div class="row">
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="1" onclick="tambahNomor(this)"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="2" onclick="tambahNomor(this)"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="3" onclick="tambahNomor(this)"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value=" + " onclick="tambahNomor(this)"></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="+" onclick="tambahNomor(this)"></div>
 				</div>
 
 				<div class="row">
 					<div class="col-xs-3"></div>
 					<div class="col-xs-3"><input type="button" class="btn btn-default" value="0" onclick="tambahNomor(this)"></div>
 					<div class="col-xs-3"></div>
-					<div class="col-xs-3"><input type="button" class="btn btn-default" value="=" onclick=""></div>
+					<div class="col-xs-3"><input type="button" class="btn btn-default" value="=" onclick="if (checkNum(this.form.display.value)) { compute(this.form) }"></div>
 				</div>
 			</div>
 		</form>
@@ -76,7 +76,26 @@
 			else
 				document.getElementById("display").value += nomor;
 		}
-	</script>
+		function compute(form) {
+			form.display.value = eval(document.getElementById("display").value)
+		}
+		function hapus(input) {
+			input.value = input.value.substring(0, input.value.length - 1)
+		}
+		function checkNum(str) {
+			for (var i = 0; i< str.length; i++) {
+				var ch = str.substring(i, i+1)
+				if (ch < "0" || ch >"9") {
+					if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
+						&& ch != "(" && ch!= ")") {
+						alert("invalid entry!")
+					return false
+				}
+			}
+		}
+		return true
+	}
+</script>
 
 </body>
 </html>
